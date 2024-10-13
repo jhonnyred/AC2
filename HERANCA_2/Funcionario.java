@@ -16,8 +16,9 @@ class Funcionario extends Pessoa{
     }
 
     // MÉTODOS
-    protected String printFunc(){
-        String pessoa = printPessoa();
+    @Override
+    protected String printaTudo(){
+        String pessoa = super.printaTudo();
         String contratacao = formatStr(this.contratacao);
         String salario = String.valueOf(this.salario);
 

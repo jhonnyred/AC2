@@ -12,8 +12,9 @@ class Vendedor extends Funcionario{
     }
 
     // MÉTODOS
-    protected String printVend(){
-        String funcionario = printFunc();
+    @Override
+    protected String printaTudo(){
+        String funcionario = super.printaTudo();
         String comissao = String.valueOf(this.comissao);
 
         return funcionario+ "\nComissao: " +comissao+ "%";

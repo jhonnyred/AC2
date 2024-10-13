@@ -31,7 +31,8 @@ public class Pessoa {
         return formatado;
     }
 
-    protected String printPessoa(){
+    
+    protected String printaTudo(){
         String nome = this.nome;
         String cpf = this.cpf;
         String nascimento = formatStr(this.nascimento);

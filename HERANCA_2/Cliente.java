@@ -16,8 +16,9 @@ public class Cliente extends Pessoa{
     }
 
     // MÉTODOS
-    protected String printClient(){
-        String pessoa = printPessoa();
+    @Override
+    protected String printaTudo(){
+        String pessoa = super.printaTudo();
         String email = this.email;
         String telefone = this.telefone;
         String fidelidade = this.fidelidade;

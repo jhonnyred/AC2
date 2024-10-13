@@ -12,8 +12,9 @@ class Gerente extends Funcionario{
     }
 
     // MÉTODOS
-    protected String printGeren(){
-        String funcionario = printFunc();
+    @Override
+    protected String printaTudo(){
+        String funcionario = super.printaTudo();
         String departamento = this.departamento;
 
         return funcionario+ "\nDepartamento: " +departamento;

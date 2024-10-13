@@ -6,8 +6,8 @@ public class Main {
         Cliente c1 = new Cliente("Claudineia", "4568972357", "22/06/1987", "neinha@outlook.com", "15987532458", "5697");
 
         // Printando
-        System.out.println(v1.printVend());
-        System.out.println(g1.printGeren());
-        System.out.println(c1.printClient());
+        System.out.println(v1.printaTudo());
+        System.out.println(g1.printaTudo());
+        System.out.println(c1.printaTudo());
     }
 }
