@@ -6,8 +6,8 @@ public class Main{
         Funcionario fun1 = new Funcionario("Augusto", "Boituva, SP", "augustinho@yopmail.com", 1700);
 
         // Printando
-        System.out.println(f1.printaFisica());
-        System.out.println(j1.printaJuri());
-        System.out.println(fun1.printaFunc());
+        System.out.println(f1.printaTudo());
+        System.out.println(j1.printaTudo());
+        System.out.println(fun1.printaTudo());
     }
 }

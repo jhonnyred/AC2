@@ -14,8 +14,9 @@ class Fisica extends Pessoa{
     }
 
     // MÉTODOS
-    public String printaFisica(){
-        String nomeEnde = printaTudo();
+    @Override
+    public String printaTudo(){
+        String nomeEnde = super.printaTudo();
         String email = this.email;
         String cpf = this.cpf;
         return nomeEnde+ "\nEmail: " +email+ "\nCPF: " +cpf;

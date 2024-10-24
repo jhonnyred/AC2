@@ -14,8 +14,9 @@ class Funcionario extends Pessoa{
     }
 
     // MÉTODOS
-    public String printaFunc(){
-        String nomeEnde = printaTudo();
+    @Override
+    public String printaTudo(){
+        String nomeEnde = super.printaTudo();
         String cpf = this.cpf;
         String salario = String.valueOf(this.salario);
 

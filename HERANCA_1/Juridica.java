@@ -14,8 +14,9 @@ class Juridica extends Pessoa{
     }
 
     // MÉTODOS
-    public String printaJuri(){
-        String nomeEnde = printaTudo();
+    @Override
+    public String printaTudo(){
+        String nomeEnde = super.printaTudo();
         String email = this.email;
         String cnpj = this.cnpj;
 
