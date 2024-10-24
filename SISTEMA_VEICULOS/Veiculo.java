@@ -25,6 +25,13 @@ class Veiculo {
         return "\nModelo: " +modelo+ "\nFabricacao:" +fabricacao;
     }
 
+    
+    protected String insert(){
+        String modelo = this.modelo;
+        String fabricacao = this.fabricacao.format(formatador);
+        return "INSERT INTO Veiculo (modelo, fabricacao)\nVALUES ('"+modelo+"', '"+fabricacao+"');";
+    }
+
     // GETTERS
     public String getModelo(){
         return modelo;

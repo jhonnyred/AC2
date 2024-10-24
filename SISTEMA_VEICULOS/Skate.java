@@ -28,6 +28,14 @@ class Skate extends Veiculo{
         return "\nSKATE" +veiculo +"\nMarca: " +marca+ "\nCor: " +cor+ "\nRoda: " +roda;
     }
 
+    protected String insert(){
+        String modelo = getModelo();
+        String fabricacao = getFabricacao().format(formatador);
+        String cor = this.cor;
+        String roda = String.valueOf(this.dureza)+ "A " +String.valueOf(this.diametro)+ "mm";
+        return "INSERT INTO Skate (modelo, fabricacao, marca , cor, roda)\nVALUES ('"+modelo+"', '"+fabricacao+"', '"+cor+"', '"+roda+"');";
+    }
+
     // GETTERS
     public String getMarca(){
         return marca;

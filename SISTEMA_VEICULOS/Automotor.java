@@ -27,6 +27,15 @@ class Automotor extends Veiculo{
         return veiculo+ "\nMontadora: " +montadora+ "\nCor: " +cor+ "\nOdômetro: " +kilometragem +"Km";
     }
 
+    protected String insert(){
+        String modelo = getModelo();
+        String fabricacao = getFabricacao().format(formatador);
+        String montadora = this.montadora;
+        String cor = this.cor;
+        String kilometragem = String.valueOf(this.kilometragem);
+        return "INSERT INTO Automotor (modelo, fabricacao, montadora, cor, kilometragem)\nVALUES ('"+modelo+"', '"+fabricacao+"', '"+montadora+"', '"+cor+"', '"+kilometragem+"');";
+    }
+
     // GETTERS
     public String getMontadora(){
         return montadora;

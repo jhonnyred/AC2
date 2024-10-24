@@ -23,6 +23,17 @@ class Caminhao extends Automotor{
         return "\nCAMINHAO" +automotor+ "\nQtd. Eixos: " +eixos+ "\nPeso: " +peso+ "t";
     }
 
+    protected String insert(){
+        String modelo = getModelo();
+        String fabricacao = getFabricacao().format(formatador);
+        String montadora = getMontadora();
+        String cor = getCor();
+        String kilometragem = String.valueOf(getKilometragem());
+        String eixos = String.valueOf(this.eixos);
+        String peso = String.valueOf(this.peso);
+        return "INSERT INTO Automotor (modelo, fabricacao, montadora, cor, kilometragem, eixos, peso)\nVALUES ('"+modelo+"', '"+fabricacao+"', '"+montadora+"', '"+cor+"', '"+kilometragem+"', '"+eixos+"', '"+peso+"');";
+    }
+
     // GETTERS
     public int getEixos(){
         return eixos;

@@ -32,6 +32,17 @@ class Bicicleta extends Veiculo{
         return "\nBICILETA" +veiculo+ "\nMarca: " +marca+ "\nCor: " +cor+ "\nMaterial: " +material+ "\nQtd. Marchas: " +marcha+ "\nAmortecedor: " +amortecedor;
     }
 
+    protected String insert(){
+        String modelo = getModelo();
+        String fabricacao = getFabricacao().format(formatador);
+        String marca = this.marca;
+        String cor = this.cor;
+        String material = this.material;
+        String marcha = String.valueOf(this.marcha);
+        String amortecedor = String.valueOf(this.amortecedor);
+        return "INSERT INTO Bicicleta (modelo, fabricacao, marca, cor, material, marcha, amortecedor)\nVALUES ('"+modelo+"', '"+fabricacao+"', '"+marca+"', '"+cor+"', '"+material+"', '"+marcha+"', '"+amortecedor+"');";
+    }
+
     // GETTERS
     public String getMarca(){
         return marca;

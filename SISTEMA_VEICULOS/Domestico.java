@@ -31,8 +31,27 @@ class Domestico extends Automotor{
             freio = "ABS";
         }
 
-
         return "\nDOMESTICO" +automotor+ "\nQtd. Passageiros: " +passageiros+ "\nTipo freio: " +freio+ "\nAirbag: " +airbag;
+    }
+
+    protected String insert(){
+        String modelo = getModelo();
+        String fabricacao = getFabricacao().format(formatador);
+        String montadora = getMontadora();
+        String cor = getCor();
+        String kilometragem = String.valueOf(getKilometragem());
+        String passageiros = String.valueOf(this.passageiros);
+        String airbag = String.valueOf(this.airbag);
+
+        String freio;
+        if(this.freio == FREIOS.TAMBOR){
+             freio = "TAMBOR";
+        }else if(this.freio == FREIOS.DISCO){
+            freio = "DISCO";
+        }else{
+            freio = "ABS";
+        }
+        return "INSERT INTO Automotor (modelo, fabricacao, montadora, cor, kilometragem, qtd. passageiros, airbag)\nVALUES ('"+modelo+"', '"+fabricacao+"', '"+montadora+"', '"+cor+"', '"+kilometragem+"', '"+passageiros+"', '"+airbag+"', '"+freio+"');";
     }
 
     // GETTERS

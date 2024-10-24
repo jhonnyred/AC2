@@ -23,6 +23,17 @@ class Motocicleta extends Automotor{
         return "\nMOTOCICLETA" +automotor+ "\nCilindradas: " +cilindradas+ "\nTorque: " +torque+ "N.m";
     }
 
+    protected String insert(){
+        String modelo = getModelo();
+        String fabricacao = getFabricacao().format(formatador);
+        String montadora = getModelo();
+        String cor = getCor();
+        String kilometragem = String.valueOf(getKilometragem());
+        String cilindradas = String.valueOf(this.cilindradas);
+        String torque = String.valueOf(this.torque);
+        return "INSERT INTO Automotor (modelo, fabricacao, montadora, cor, kilometragem, cilindradas, torque)\nVALUES ('"+modelo+"', '"+fabricacao+"', '"+montadora+"', '"+cor+"', '"+kilometragem+"', '"+cilindradas+"', '"+torque+"');";
+    }
+
     // GETTERS
     public int getCilindradas(){
         return cilindradas;
