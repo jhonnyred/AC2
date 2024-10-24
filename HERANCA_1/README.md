@@ -17,7 +17,7 @@ O projeto consiste em um arranjo de calsses hipotético para uma empresa, onde h
     - email
     - cnpj
 
-Todas as classes acima referidas possuem o mesmo método (printaTudo()) sobreposto da classe Pessoa.
+Todas as classes acima referidas possuem o mesmo método (printaTudo()) sobreposto da classe Pessoa, o método consi9ste em exibir os atirbutos da classe no formato String.
 
 ### 📋 Pré-requisitos
 
