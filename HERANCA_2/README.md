@@ -1,4 +1,4 @@
-# FILME
+# HERANÇA_2
 
 projeto consiste em um arranjo de calsses hipotético para uma empresa, onde há 4 personas hipotéticas, Funcionário, Gerente, Vendedor e Cliente as classes com seus respectivos atributos são:
 * Pessoa (super):
